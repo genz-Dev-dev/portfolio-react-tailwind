@@ -1,28 +1,36 @@
-import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
+import {
+  Code2,
+  Database,
+  CreditCard,
+  Layers,
+  GraduationCap,
+  Award,
+} from "lucide-react";
 
 const highlights = [
   {
     icon: Code2,
-    title: "Clean Code",
+    title: "Clean Code & Architecture",
     description:
-      "Writing maintainable, scalable code that stands the test of time.",
+      "Applying SOLID principles, OOP, and modular design to write robust, maintainable backend and frontend code.",
   },
   {
-    icon: Rocket,
-    title: "Performance",
+    icon: CreditCard,
+    title: "Payment Gateway Integration",
     description:
-      "Optimizing for speed and delivering lightning-fast user experiences.",
+      "Hands-on experience integrating Cambodian payment ecosystems including ABA Pay and Bakong KHQR.",
   },
   {
-    icon: Users,
-    title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
+    icon: Layers,
+    title: "Full-Stack & Microservices",
+    description:
+      "Building decoupled architectures with Spring Boot, Eureka microservices, Laravel, and reactive frontends.",
   },
   {
-    icon: Lightbulb,
-    title: "Innovation",
+    icon: Database,
+    title: "Database & API Optimization",
     description:
-      "Staying ahead with the latest technologies and best practices.",
+      "Designing schemas and tuning queries across PostgreSQL, PostgREST, MySQL, MongoDB, and Microsoft SQL Server.",
   },
 ];
 
@@ -40,56 +48,75 @@ export const About = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Building the future,
+              Engineering reliable back-ends,
               <span className="font-serif italic font-normal text-white">
                 {" "}
-                one component at a time.
+                delivering seamless experiences.
               </span>
             </h2>
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a passionate software engineer with over half years of
-                experience crafting digital products that make a difference. My
-                journey started with a curiosity for how things work on the web,
-                and it has evolved into a deep expertise in modern frontend
-                technologies.
+                I am a final-year Computer Science and Engineering student at
+                the <strong className="text-foreground">Royal University of Phnom Penh (RUPP)</strong> and
+                a dedicated full-stack developer with over 2 years of practical
+                software development experience.
               </p>
               <p>
-                I specialize in React, Angular.js, Vue and TypeScript, building
-                everything from sleek landing pages to complex enterprise
-                applications. My approach combines technical excellence with a
-                keen eye for design and user experience.
+                During my web developer internship at <strong className="text-foreground">Etec Center</strong>,
+                I implemented end-to-end e-commerce solutions, engineered task management systems,
+                connected complex RESTful APIs between front-end interfaces and Spring Boot / Laravel back-ends,
+                and integrated real-world payment solutions such as <strong className="text-primary">ABA Pay</strong> and <strong className="text-primary">Bakong KHQR</strong>.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or sharing knowledge with
-                the developer community.
+                My toolkit spans both backend architecture (Java Spring Boot, Eureka microservices, Dart Frog, PHP/Laravel)
+                and modern client-side engineering (React.js, Vue 3, AngularJS, TypeScript, Tailwind CSS), alongside mobile development with Kotlin and Capacitor, and UI/UX design in Figma.
               </p>
+            </div>
+
+            {/* Academic & Certifications Summary */}
+            <div className="grid sm:grid-cols-2 gap-4 animate-fade-in animation-delay-250">
+              <div className="glass p-4 rounded-xl border border-primary/20 flex items-start gap-3">
+                <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                  <GraduationCap className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground">B.S. Computer Science & Eng.</h4>
+                  <p className="text-xs text-muted-foreground">Royal University of Phnom Penh (Final Year)</p>
+                </div>
+              </div>
+              <div className="glass p-4 rounded-xl border border-primary/20 flex items-start gap-3">
+                <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                  <Award className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-foreground">Cloud & Network Certified</h4>
+                  <p className="text-xs text-muted-foreground">AWS Academy Cloud Foundations • Cisco CCNA 1 & 2</p>
+                </div>
+              </div>
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "My mission is to create digital experiences that are not just
-                functional, but truly delightful — products that users love to
-                use and developers love to maintain."
+                "Committed to clean code, solid architecture, and user-centered
+                solutions that scale seamlessly under real-world demands."
               </p>
             </div>
           </div>
 
-          {/* Right Column - Hilights */}
+          {/* Right Column - Highlights */}
           <div className="grid sm:grid-cols-2 gap-6">
             {highlights.map((item, idx) => (
               <div
                 key={idx}
-                className="glass p-6 rounded-2xl animate-fade-in"
+                className="glass p-6 rounded-2xl animate-fade-in border border-primary/10 hover:border-primary/40 transition-all duration-300"
                 style={{ animationDelay: `${(idx + 1) * 100}ms` }}
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20 transition-colors">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {item.description}
                 </p>
               </div>

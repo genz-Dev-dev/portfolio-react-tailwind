@@ -1,41 +1,60 @@
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight, Github, ExternalLink } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "E-Commerce Management & POS Dashboard",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
-    image: "/projects/project1.png",
-    tags: ["Vue3", "Typescript", "Php/Laravel","Mysql"],
-    link: "#",
-    github: "https://github.com/Tola-Nam",
+      "Full-stack e-commerce management platform featuring real-time revenue analytics, barcode scanning, order management, system auditing, and online payment processing.",
+    image: "/projects/ecommerce-dashboard.png",
+    tags: ["Vue 3", "Spring Boot", "ABA Pay", "Bakong KHQR", "PostgreSQL / PostgREST", "Tailwind CSS"],
+    link: "https://tola24.namtola4444.workers.dev/dashboard",
+    github: "https://github.com/genz-Dev-dev",
   },
   {
-    title: "E-Commerce Platform",
+    title: "shopKh Customer Store & Order Portal",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "../src/assets/dashboard.png",
-    tags: ["Angular.js", "Daisy", "MongoDb", "Tailwind"],
-    link: "#",
-    github: "https://github.com/Tola-Nam",
+      "Consumer e-commerce storefront with live order status tracking, integrated AI recommendation features, and direct Cambodian mobile banking checkout.",
+    image: "/projects/ecommerce-orders.png",
+    tags: ["Vue 3", "TypeScript", "Spring Boot", "Capacitor", "PostgreSQL", "AI Model"],
+    link: "https://tola24.namtola4444.workers.dev/orders",
+    github: "https://github.com/genz-Dev-dev",
   },
   {
-    title: "AI Writing Assistant",
+    title: "Score & Grade Academic Assessment Core",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-    image: "../src/assets/projects.png",
-    tags: ["React", "OpenAI", "java", "java spring data"],
+      "Academic assessment platform with real-time score statistics, batch validation, grade reporting, and student semester record management powered by PostgreSQL & PostgREST.",
+    image: "/projects/grade-management.png",
+    tags: ["Spring Boot", "AngularJS", "PostgREST", "PostgreSQL", "SQL Optimization"],
     link: "#",
-    github: "https://github.com/Tola-Nam",
+    github: "https://github.com/genz-Dev-dev",
   },
   {
-    title: "Project Management Tool",
+    title: "University Role-Based Access Control (RBAC)",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "../src/assets/Screenshot From 2025-12-16 00-00-31.png",
-    tags: ["Vue.js", "Tailwind CSS", "Postgre", "spring"],
+      "Enterprise security system implementing granular permission matrices, role definitions (ROLE_ADMIN, ROLE_STAFF), and secure API route authorization.",
+    image: "/projects/rbac-system.png",
+    tags: ["Java", "Spring Security", "Spring Boot", "PostgreSQL", "Windows Server"],
     link: "#",
-    github: "https://github.com/Tola-Nam",
+    github: "https://github.com/genz-Dev-dev",
+  },
+  {
+    title: "CamSolution Tech Ecosystem Platform",
+    description:
+      "Modern corporate software agency portal showcasing custom engineering solutions, cloud architecture, AI solutions, and digital transformation services.",
+    image: "/projects/camsolution.png",
+    tags: ["React.js", "TypeScript", "Tailwind CSS", "PostgREST / API", "Vercel"],
+    link: "https://camsolution.vercel.app",
+    github: "https://github.com/genz-Dev-dev",
+  },
+  {
+    title: "Tourism Management Information System",
+    description:
+      "RUPP Year 4 final-semester software engineering project featuring high-concurrency microservices, robust data persistence with PostgREST & MongoDB, and comprehensive UML design.",
+    image: "/projects/university-portal.png",
+    tags: ["Dart Frog", "PostgREST", "MongoDB", "Docker", "Software Architecture"],
+    link: "#",
+    github: "https://github.com/genz-Dev-dev",
   },
 ];
 
@@ -49,52 +68,60 @@ export const Projects = () => {
         {/* Section Header */}
         <div className="text-center mx-auto max-w-3xl mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            Featured Work
+            Featured Work & UI Projects
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-            Projects that
+            Engineering solutions that
             <span className="font-serif italic font-normal text-white">
               {" "}
-              make an impact.
+              deliver real impact.
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A selection of my recent work, from complex web applications to
-            innovative tools that solve real-world problems.
+            A showcase of my recent production systems, UI dashboards, and university engineering projects — from payment-integrated e-commerce platforms to backend architectures and security portals.
           </p>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
+              className="group glass rounded-2xl overflow-hidden animate-fade-in flex flex-col border border-primary/20 hover:border-primary/50 transition-all duration-300"
               style={{ animationDelay: `${(idx + 1) * 100}ms` }}
             >
               {/* Image */}
-              <div className="relative overflow-hidden aspect-video">
+              <div className="relative overflow-hidden aspect-video bg-muted/20">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
                 />
                 <div
                   className="absolute inset-0 
-                bg-gradient-to-t from-card via-card/50
-                 to-transparent opacity-60"
+                bg-gradient-to-t from-card via-card/40
+                 to-transparent opacity-70"
                 />
                 {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-xs">
+                  {project.link !== "#" && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                      title="View Live Demo"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                    </a>
+                  )}
                   <a
-                    href={project.link}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                  >
-                    <ArrowUpRight className="w-5 h-5" />
-                  </a>
-                  <a target="blank"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href={project.github}
                     className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                    title="View Source on GitHub"
                   >
                     <Github className="w-5 h-5" />
                   </a>
@@ -102,26 +129,35 @@ export const Projects = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6 space-y-4">
-                <div className="flex items-start justify-between">
-                  <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
-                  <ArrowUpRight
-                    className="w-5 h-5 
-                  text-muted-foreground group-hover:text-primary
-                   group-hover:translate-x-1 
-                   group-hover:-translate-y-1 transition-all"
-                  />
+              <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-start justify-between gap-2 mb-2">
+                    <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    {project.link !== "#" ? (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground group-hover:text-primary transition-colors"
+                      >
+                        <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </a>
+                    ) : (
+                      <ArrowUpRight className="w-5 h-5 text-muted-foreground/40" />
+                    )}
+                  </div>
+                  <p className="text-muted-foreground text-sm line-clamp-3 leading-relaxed">
+                    {project.description}
+                  </p>
                 </div>
-                <p className="text-muted-foreground text-sm">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
+
+                <div className="flex flex-wrap gap-1.5 pt-2">
                   {project.tags.map((tag, tagIdx) => (
                     <span
                       key={tagIdx}
-                      className="px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300"
+                      className="px-3 py-1 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300"
                     >
                       {tag}
                     </span>
@@ -133,9 +169,13 @@ export const Projects = () => {
         </div>
 
         {/* View All CTA */}
-        <div className="text-center mt-12 animate-fade-in animation-delay-500">
-          <AnimatedBorderButton>
-            View All Projects
+        <div className="text-center mt-14 animate-fade-in animation-delay-500">
+          <AnimatedBorderButton
+            href="https://github.com/genz-Dev-dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore Projects on GitHub (@genz-Dev-dev)
             <ArrowUpRight className="w-5 h-5" />
           </AnimatedBorderButton>
         </div>

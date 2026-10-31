@@ -1,39 +1,144 @@
+import { Server, Layout, Database, CreditCard, Cloud, ShieldCheck } from "lucide-react";
+
 const experiences = [
   {
-    period: "2025 — Present",
-    role: "Full Stack Engineer",
-    company: "University",
+    period: "2023 — Present (Final Year)",
+    role: "Computer Science & Engineering Student",
+    company: "Royal University of Phnom Penh (RUPP)",
     description:
-      "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
-    technologies: ["React", "Vue3","TypeScript", "Angular.js", "MongoDb","Mysql","PostgreSql","cShap","Springboot","Laravel", ],
+      "Pursuing Bachelor of Computer Science & Engineering. Leading final-semester software engineering project 'The Tourism Management Information System' using Dart Frog + MongoDB APIs. Designed e-commerce Figma prototypes, built team applications with Angular and Node.js (Vania), and developed AI-assisted robotics.",
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "Dart Frog",
+      "MongoDB",
+      "Node.js",
+      "Vania",
+      "Angular",
+      "Figma",
+      "C++",
+      "UML",
+    ],
     current: true,
   },
   {
-    period: "2024 — 2025",
-    role: "Frontend Engineer",
-    company: "At university",
+    period: "Sep 2024 — Oct 2025",
+    role: "Web Developer Intern",
+    company: "Etec Center, Phnom Penh",
     description:
-      "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
-    technologies: ["Vue", "Pinea", "java-swing", "javascript","Networking","php"],
+      "Developed e-commerce solutions with Vue 3 and Spring Boot, integrating AI model capabilities and Cambodian online payments (ABA Pay & Bakong KHQR). Built enterprise backend systems with Spring Boot & AngularJS under Professor Ouk Khean, created a note/task management app with Laravel & AngularJS, tuned SQL reporting queries, and administered Windows Server environments.",
+    technologies: [
+      "Spring Boot",
+      "Vue 3",
+      "AngularJS",
+      "Laravel",
+      "MySQL",
+      "ABA Pay",
+      "Bakong KHQR",
+      "RESTful APIs",
+      "Windows Server",
+    ],
     current: false,
   },
   {
-    period: "2023 — 2024",
-    role: "Student",
-    company: "In university",
+    period: "2024 — Present",
+    role: "Full-Stack & Mobile App Developer",
+    company: "Freelance & Independent Projects",
     description:
-      "Contributed to the development of a SaaS platform from MVP to production. Collaborated with designers to implement pixel-perfect UI components.",
-    technologies: ["c", "c++", "basic networking", "Mysql"],
-    current: false,
+      "Crafted full-stack web and cross-platform mobile applications using Vue.js, TypeScript, and Capacitor. Deployed containerized applications with Docker, established GitHub CI/CD workflows, and integrated secure payment gateways and REST APIs for client solutions.",
+    technologies: [
+      "React.js",
+      "Vue 3",
+      "TypeScript",
+      "Capacitor",
+      "Kotlin",
+      "Docker",
+      "PostgreSQL",
+      "Tailwind CSS",
+    ],
+    current: true,
+  },
+];
+
+const technicalSkillGroups = [
+  {
+    category: "Backend & Architecture",
+    icon: Server,
+    skills: [
+      "Java",
+      "Spring Boot",
+      "Spring Cloud",
+      "Eureka / Microservices",
+      "Dart Frog",
+      "PHP / Laravel",
+      "Vania Framework",
+      "Node.js",
+      "RESTful APIs",
+    ],
   },
   {
-    period: "2024 — present",
-    role: "Freelance Developer",
-    company: "Self-Employed",
-    description:
-      "Delivered custom web solutions for small businesses and startups. Built 10+ websites and applications, handling everything from design to deployment.",
-    technologies: ["JavaScript", "PHP", "java", "MySQL","MongoDb"],
-    current: false,
+    category: "Frontend & Mobile",
+    icon: Layout,
+    skills: [
+      "React.js",
+      "Vue 3",
+      "AngularJS",
+      "TypeScript",
+      "JavaScript",
+      "HTML5 / CSS3",
+      "Tailwind CSS",
+      "Capacitor",
+      "Kotlin (Android)",
+      "Figma (UI/UX)",
+    ],
+  },
+  {
+    category: "Databases & Storage",
+    icon: Database,
+    skills: [
+      "PostgreSQL",
+      "PostgREST",
+      "MySQL",
+      "MongoDB",
+      "Microsoft SQL Server",
+      "Query Optimization",
+      "Database Modeling",
+    ],
+  },
+  {
+    category: "Payment & Integrations",
+    icon: CreditCard,
+    skills: [
+      "ABA Pay",
+      "Bakong KHQR",
+      "Payment Webhooks",
+      "AI Model APIs",
+      "Barcode & QR Scanning",
+    ],
+  },
+  {
+    category: "DevOps & Cloud",
+    icon: Cloud,
+    skills: [
+      "Docker",
+      "Git & GitHub",
+      "Jenkins",
+      "AWS (Cloud Foundations)",
+      "Vercel",
+      "CI/CD Pipelines",
+    ],
+  },
+  {
+    category: "Systems & Engineering Principles",
+    icon: ShieldCheck,
+    skills: [
+      "Windows Server Admin",
+      "Cisco CCNA 1 & 2",
+      "SOLID Principles",
+      "Design Patterns",
+      "UML Diagrams",
+      "SDLC & Agile",
+    ],
   },
 ];
 
@@ -52,17 +157,17 @@ export const Experience = () => {
             className="text-secondary-foreground text-sm
            font-medium tracking-wider uppercase animate-fade-in"
           >
-            Career Journey
+            Career Journey & Technical Matrix
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold
            mt-4 mb-6 animate-fade-in animation-delay-100
             text-secondary-foreground"
           >
-            Experience that{" "}
+            Experience & skills that{" "}
             <span className="font-serif italic font-normal text-white">
               {" "}
-              speaks volumes.
+              deliver results.
             </span>
           </h2>
 
@@ -70,13 +175,12 @@ export const Experience = () => {
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
-            A timeline of my professional growth, from curious beginner to
-            senior engineer leading teams and building products at scale.
+            A comprehensive look at my engineering experience at Etec Center, academic leadership at RUPP, and mastery across modern development technologies.
           </p>
         </div>
 
         {/* Timeline */}
-        <div className="relative">
+        <div className="relative mb-28">
           <div className="timeline-glow absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/70 via-primary/30 to-transparent md:-translate-x-1/2 shadow-[0_0_25px_rgba(32,178,166,0.8)]" />
 
           {/* Experience Items */}
@@ -88,7 +192,7 @@ export const Experience = () => {
                 style={{ animationDelay: `${(idx + 1) * 150}ms` }}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-0 md:left-1/2 top-0 w-3 h-3 bg-primary rounded-full -translate-x-1/2 ring-4 ring-background z-10">
+                <div className="absolute left-0 md:left-1/2 top-0 w-3.5 h-3.5 bg-primary rounded-full -translate-x-1/2 ring-4 ring-background z-10">
                   {exp.current && (
                     <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75" />
                   )}
@@ -103,31 +207,74 @@ export const Experience = () => {
                   }`}
                 >
                   <div
-                    className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}
+                    className="glass p-6 rounded-2xl border border-primary/30 hover:border-primary/60 transition-all duration-300 shadow-lg"
                   >
-                    <span className="text-sm text-primary font-medium">
+                    <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-2">
                       {exp.period}
                     </span>
-                    <h3 className="text-xl font-semibold mt-2">{exp.role}</h3>
-                    <p className="text-muted-foreground">{exp.company}</p>
-                    <p className="text-sm text-muted-foreground mt-4">
+                    <h3 className="text-xl font-bold mt-1 text-foreground">{exp.role}</h3>
+                    <p className="text-primary font-medium text-sm">{exp.company}</p>
+                    <p className="text-sm text-muted-foreground mt-4 leading-relaxed">
                       {exp.description}
                     </p>
                     <div
-                      className={`flex flex-wrap gap-2 mt-4 ${
+                      className={`flex flex-wrap gap-1.5 mt-4 ${
                         idx % 2 === 0 ? "md:justify-end" : ""
                       }`}
                     >
                       {exp.technologies.map((tech, techIdx) => (
                         <span
                           key={techIdx}
-                          className="px-3 py-1 bg-surface text-xs rounded-full text-muted-foreground"
+                          className="px-2.5 py-1 bg-surface text-xs rounded-full border border-border/40 text-muted-foreground"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Technical Skills Matrix Section */}
+        <div className="mt-20">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
+              Technical Competencies
+            </span>
+            <h3 className="text-3xl font-bold mt-2 text-foreground">
+              Skills & Expertise Matrix
+            </h3>
+            <p className="text-sm text-muted-foreground mt-2">
+              Comprehensive breakdown of languages, frameworks, databases, and system engineering tools.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {technicalSkillGroups.map((group, gIdx) => (
+              <div
+                key={gIdx}
+                className="glass p-6 rounded-2xl border border-primary/20 hover:border-primary/50 transition-all duration-300"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2.5 rounded-xl bg-primary/10 text-primary">
+                    <group.icon className="w-5 h-5" />
+                  </div>
+                  <h4 className="font-semibold text-foreground text-base">
+                    {group.category}
+                  </h4>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {group.skills.map((skill, sIdx) => (
+                    <span
+                      key={sIdx}
+                      className="px-3 py-1 rounded-lg bg-surface/80 border border-border/60 text-xs font-medium text-muted-foreground hover:text-primary hover:border-primary/40 transition-colors"
+                    >
+                      {skill}
+                    </span>
+                  ))}
                 </div>
               </div>
             ))}

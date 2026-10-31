@@ -1,9 +1,9 @@
-import { Github, Linkedin, Twitter, Heart } from "lucide-react";
+import { Github, Send, Mail } from "lucide-react";
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Github, href: "https://github.com/genz-Dev-dev", label: "GitHub (@genz-Dev-dev)" },
+  { icon: Send, href: "https://t.me/tola_nam", label: "Telegram (@tola_nam)" },
+  { icon: Mail, href: "mailto:namtola4444@gmail.com", label: "Email" },
 ];
 
 const footerLinks = [
