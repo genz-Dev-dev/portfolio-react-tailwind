@@ -5,10 +5,13 @@ import {
   Send,
   CheckCircle,
   AlertCircle,
+  MessageSquare,
+  Download,
 } from "lucide-react";
 import { Button } from "@/components/Button";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import cvPdf from "../assets/nam tola.pdf";
 
 const contactInfo = [
   {
@@ -20,14 +23,20 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+(885) 963-279-360",
-    href: "tel:+855 963279360",
+    value: "0887 991 349",
+    href: "tel:0887991349",
+  },
+  {
+    icon: MessageSquare,
+    label: "Telegram",
+    value: "@tola_nam",
+    href: "https://t.me/tola_nam",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "Sen sok , Cambodia",
-    href: "https://maps.app.goo.gl/Jo1GsJkuaFvuXvHu8?g_st=atm",
+    value: "Songkat Pur senChey, Khan Chom Chao, Phnom Penh, Cambodia",
+    href: "https://maps.google.com/?q=Songkat+Pur+senChey+Phnom+Penh+Cambodia",
   },
 ];
 
@@ -55,7 +64,7 @@ export const Contact = () => {
 
       if (!serviceId || !templateId || !publicKey) {
         throw new Error(
-          "EmailJS configuration is missing. Please check your environment variables."
+          "EmailJS configuration is missing. Please contact me directly via Telegram or email."
         );
       }
 
@@ -76,11 +85,11 @@ export const Contact = () => {
       });
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
-      console.error("EmailJS error:", error);
+      console.error("EmailJS error:", err);
       setSubmitStatus({
         type: "error",
         message:
-          error.text || "Failed to send message. Please try again later.",
+          err?.text || err?.message || "Failed to send message. Please contact me via Telegram or email directly.",
       });
     } finally {
       setIsLoading(false);
@@ -241,11 +250,17 @@ export const Contact = () => {
                 <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                 <span className="font-medium">Currently Available</span>
               </div>
-              <p className="text-muted-foreground text-sm">
-                I'm currently open to new opportunities and exciting projects.
-                Whether you need a full-time engineer or a freelance consultant,
-                let's talk!
+              <p className="text-muted-foreground text-sm mb-6">
+                I'm currently seeking new full-time software engineering and backend roles, as well as high-impact freelance projects. Let's build something exceptional together!
               </p>
+              <a
+                href={cvPdf}
+                download="Nam_Tola_CV.pdf"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 border border-primary/30 hover:bg-primary hover:text-primary-foreground text-primary text-sm font-medium transition-all"
+              >
+                <Download className="w-4 h-4" />
+                Download CV (PDF)
+              </a>
             </div>
           </div>
         </div>

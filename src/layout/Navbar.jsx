@@ -53,8 +53,17 @@ export const Navbar = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
+        <div className="hidden md:flex items-center gap-3">
+          <a
+            href="/Nam_Tola_CV.pdf"
+            download="Nam_Tola_CV.pdf"
+            className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-1.5 rounded-full glass"
+          >
+            Download CV
+          </a>
+          <a href="#contact">
+            <Button size="sm">Contact Me</Button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -81,9 +90,24 @@ export const Navbar = () => {
               </a>
             ))}
 
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
-              Contact Me
-            </Button>
+            <a
+              href="/Nam_Tola_CV.pdf"
+              download="Nam_Tola_CV.pdf"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-center py-2.5 rounded-full glass text-sm font-medium text-foreground hover:text-primary transition-colors"
+            >
+              Download CV (PDF)
+            </a>
+
+            <a
+              href="#contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="w-full"
+            >
+              <Button className="w-full">
+                Contact Me
+              </Button>
+            </a>
           </div>
         </div>
       )}

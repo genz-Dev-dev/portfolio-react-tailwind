@@ -4,37 +4,28 @@ import { useState } from "react";
 const testimonials = [
   {
     quote:
-      "Led by Pol Pot, the Khmer Rouge imposed an extreme communist system that forced people out of cities, abolished money, and destroyed schools and religion. Nearly two million Cambodians died from execution, starvation, disease, and forced labor, making it one of the worst genocides in modern history.",
-    author: "History",
-    role: "Khmer History",
+      "Tola demonstrates exceptional discipline, sharp problem-solving skills, and a solid foundation in backend architecture and database systems. His clean-code approach, eagerness to learn, and collaborative mindset make him a standout engineer.",
+    author: "Chen Sienghor",
+    role: "Senior Backend Engineer, Farmer1st.org",
     avatar:
-      "https://imgs.search.brave.com/2TwLHUJKrOkbylCgoCDYd5M_nA6znt3Qv7DY0TOtqXI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNTE1/MTIzNzQwL3Bob3Rv/L2EtY2FtYm9kaWFu/LWtobWVyLXJvdWdl/LXNvbGRpZXItaXMt/c2Vlbi1oZXJlLWNh/cnJ5aW5nLWFuLXIt/cC1nLXJvY2tldC1h/cy1oZS13YWxrcy1h/bG9uZy10aGUuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPTI2/bDBGa2RXWUxaZndW/eGQ1N2psdGVHdWJP/TVFrQ0dvT0hNZ0pr/dU9pcG89",
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop",
   },
   {
     quote:
-      "Pedro is one of the most talented engineers I've worked with. His attention to detail and ability to translate complex requirements into elegant solutions is remarkable.",
-    author: "Sarah Chen",
-    role: "CTO, Tech Innovators Inc.",
+      "Under my supervision, Tola demonstrated great mastery in developing enterprise-grade backend systems using Spring Boot and AngularJS. He is detail-oriented, diligent in software design, and solves complex algorithmic problems with ease.",
+    author: "Professor Ouk Khean",
+    role: "Faculty Advisor, Royal University of Phnom Penh (RUPP)",
     avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
   },
   {
     quote:
-      "Working with Pedro was a game-changer for our project. He delivered ahead of schedule with code quality that set a new standard for our team.",
-    author: "Michael Rodriguez",
-    role: "Product Manager, Digital Solutions",
+      "During his internship at Etec Center, Tola excelled across full-stack development, successfully delivering an e-commerce platform integrated with AI and Cambodian payments (ABA and Bakong KHQR). A true team player with reliable technical execution.",
+    author: "Etec Center Team",
+    role: "Web Development Mentorship, Phnom Penh",
     avatar:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=150&h=150&fit=crop",
   },
-  {
-    quote:
-      "Pedro's expertise in React and TypeScript helped us rebuild our entire frontend in record time. His architectural decisions continue to pay dividends.",
-    author: "Emily Watson",
-    role: "Engineering Lead, StartUp Labs",
-    avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
-  },
-  
 ];
 
 export const Testimonials = () => {
